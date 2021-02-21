@@ -114,7 +114,7 @@ project ada_tasks2_01 is
       for Executable ("main_ada_tasks2_01.adb") use "main_ada_tasks2_01.adx";
    end Builder;
    
-   ....
+   .... more ...
    ....
    
 end ada_tasks2_01;
@@ -242,7 +242,51 @@ Alhamdulillah 3 times WRY
 [2021-02-21 12:44:58] process terminated successfully, elapsed time: 00.20s
 
 ===========================================================
-UPDATE GITHUB REPOSITORY
+UPDATE GITHUB REPOSITORY FOR THIS FOLDER.
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ 
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ git add .
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ git commit -m "initial commit"
+[main ec939fb] initial commit
+ 16 files changed, 1662 insertions(+)
+ create mode 100644 ada_tasks2_01.gpr
+ create mode 100644 docs/session_create_ada_concurrent_02.txt
+ create mode 100755 exec/main_ada_tasks2_01.adx
+ create mode 100644 obj/ada_tasks2_01-loc.xml
+ create mode 100644 obj/b__main_ada_tasks2_01.adb
+ create mode 100644 obj/b__main_ada_tasks2_01.ads
+ create mode 100644 obj/b__main_ada_tasks2_01.ali
+ create mode 100644 obj/b__main_ada_tasks2_01.o
+ create mode 100644 obj/gpsauto.cgpr
+ create mode 100644 obj/main_ada_tasks2_01.adb.stderr
+ create mode 100644 obj/main_ada_tasks2_01.adb.stdout
+ create mode 100644 obj/main_ada_tasks2_01.ali
+ create mode 100644 obj/main_ada_tasks2_01.bexch
+ create mode 100644 obj/main_ada_tasks2_01.cswi
+ create mode 100644 obj/main_ada_tasks2_01.o
+ create mode 100644 src/main_ada_tasks2_01.adb
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ 
+
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ 
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ git push origin main
+Username for 'https://github.com': wruslangit
+Password for 'https://wruslangit@github.com': 
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (21/21), 30.78 KiB | 3.08 MiB/s, done.
+Total 21 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/wruslangit/ada-concurrent-02.git
+   42deddb..ec939fb  main -> main
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ 
+
+OPEN WEB BROWSER TO URL: https://github.com/wruslangit/ada-concurrent-02
+
+===========================================================
+ALHAMDULILLAH 3 TIMES.
 ===========================================================
 
 
