@@ -1,0 +1,248 @@
+File: session_create_ada_concurrent_02.txt
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ date
+Sun 21 Feb 2021 12:00:52 PM +08
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ uname -a
+Linux HPEliteBook8470p-Ub2004-rt38 5.4.66-rt38 
+#1 SMP PREEMPT_RT Sat Sep 26 16:51:59 +08 2020 x86_64 x86_64 x86_64 GNU/Linux
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ lsb_release -a
+LSB Version:	core-11.1.0ubuntu2-noarch:security-11.1.0ubuntu2-noarch
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.2 LTS
+Release:	20.04
+Codename:	focal
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ 
+
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github$ git clone https://github.com/wruslangit/ada-concurrent-02.git
+Cloning into 'ada-concurrent-02'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 621 bytes | 621.00 KiB/s, done.
+
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github$ ls -al
+total 84
+drwxrwxr-x 21 wruslan wruslan 4096 Feb 21 11:58 .
+drwxr-xr-x 72 wruslan wruslan 4096 Feb 20 18:34 ..
+drwxrwxr-x  8 wruslan wruslan 4096 Feb 14 18:13 ada2012-ch01
+drwxrwxr-x  8 wruslan wruslan 4096 Dec 28 15:43 ada-ArmCortexM3
+drwxrwxr-x  8 wruslan wruslan 4096 Dec 28 15:33 ada-ArmCortexM7
+drwxrwxr-x  8 wruslan wruslan 4096 Feb 20 15:18 ada-concurrent-01
+drwxrwxr-x  3 wruslan wruslan 4096 Feb 21 11:58 ada-concurrent-02
+drwxrwxr-x  9 wruslan wruslan 4096 Dec 21 21:54 ada-file-processing
+drwxrwxr-x  8 wruslan wruslan 4096 Feb 11 20:24 ada-k8000parport
+drwxrwxr-x  8 wruslan wruslan 4096 Feb 11 20:28 ada-k8055usb
+drwxrwxr-x  8 wruslan wruslan 4096 Dec 28 11:40 ada-plplot
+drwxrwxr-x  8 wruslan wruslan 4096 Dec 21 22:45 ada-ppdev
+drwxrwxr-x  8 wruslan wruslan 4096 Dec 27 11:06 ada-serial
+drwxrwxr-x  4 wruslan wruslan 4096 Dec 28 13:02 DOCS-All
+drwxrwxr-x  8 wruslan wruslan 4096 Feb 11 20:25 embedded-ada-tests
+drwxrwxr-x  8 wruslan wruslan 4096 Feb 13 13:28 gps-ada2012-ch01
+drwxrwxr-x  4 wruslan wruslan 4096 Feb 17 09:26 spark2014
+drwxrwxr-x  8 wruslan wruslan 4096 Feb 18 12:21 spark-studio-01
+drwxrwxr-x  8 wruslan wruslan 4096 Feb 13 15:38 studio-ada2012-ch01
+drwxrwxr-x  4 wruslan wruslan 4096 Feb 17 15:29 temp
+drwxrwxr-x  2 wruslan wruslan 4096 Feb 17 09:32 TEXT
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github$ cd ada-concurrent-02/
+
+CREATE subdirectories 
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ ls -al
+total 16
+drwxrwxr-x  3 wruslan wruslan 4096 Feb 21 11:58 .
+drwxrwxr-x 21 wruslan wruslan 4096 Feb 21 11:58 ..
+drwxrwxr-x  8 wruslan wruslan 4096 Feb 21 11:58 .git
+-rw-rw-r--  1 wruslan wruslan   44 Feb 21 11:58 README.md
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ mkdir src
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ mkdir obj
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ mkdir exec
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ mkdir docs
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ mkdir figures
+
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ ls -al
+total 36
+drwxrwxr-x  8 wruslan wruslan 4096 Feb 21 11:59 .
+drwxrwxr-x 21 wruslan wruslan 4096 Feb 21 11:58 ..
+drwxrwxr-x  2 wruslan wruslan 4096 Feb 21 11:59 docs
+drwxrwxr-x  2 wruslan wruslan 4096 Feb 21 11:59 exec
+drwxrwxr-x  2 wruslan wruslan 4096 Feb 21 11:59 figures
+drwxrwxr-x  8 wruslan wruslan 4096 Feb 21 11:58 .git
+drwxrwxr-x  2 wruslan wruslan 4096 Feb 21 11:59 obj
+-rw-rw-r--  1 wruslan wruslan   44 Feb 21 11:58 README.md
+drwxrwxr-x  2 wruslan wruslan 4096 Feb 21 11:59 src
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ 
+
+Copy GPRBUILD project file. Edit .gpr file using TextEditor.
+============================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ cp ../ada-concurrent-01/ada_tasks_04.gpr ./ada_tasks2_01.gpr
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ ls -al
+total 44
+drwxrwxr-x  8 wruslan wruslan 4096 Feb 21 12:05 .
+drwxrwxr-x 21 wruslan wruslan 4096 Feb 21 11:58 ..
+-rw-rw-r--  1 wruslan wruslan 4151 Feb 21 12:05 ada_tasks2-01.gpr
+drwxrwxr-x  2 wruslan wruslan 4096 Feb 21 12:03 docs
+drwxrwxr-x  2 wruslan wruslan 4096 Feb 21 11:59 exec
+drwxrwxr-x  2 wruslan wruslan 4096 Feb 21 11:59 figures
+drwxrwxr-x  8 wruslan wruslan 4096 Feb 21 11:58 .git
+drwxrwxr-x  2 wruslan wruslan 4096 Feb 21 11:59 obj
+-rw-rw-r--  1 wruslan wruslan   44 Feb 21 11:58 README.md
+drwxrwxr-x  2 wruslan wruslan 4096 Feb 21 11:59 src
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ 
+
+===========================================================
+EXCERPT FOR Project File ada_tasks2_01.gpr
+===========================================================
+project ada_tasks2_01 is
+
+   -- for Languages   use ("Ada", "C", "C++");
+   -- for Languages   use ("Ada", "C");
+   for Languages use ("Ada");
+
+   for Source_Dirs use ("src/**"); -- Covers every subdirectory in src
+   for Object_Dir use "obj"; -- NOTE: No parantheses
+   for Exec_Dir use "exec"; -- NOTE: No parantheses
+
+   for Main use ("main_ada_tasks2_01.adb");
+   
+   -- ======== for gprbuild ===============================
+   package Builder is
+      for Executable ("main_ada_tasks2_01.adb") use "main_ada_tasks2_01.adx";
+   end Builder;
+   
+   ....
+   ....
+   
+end ada_tasks2_01;
+-- ========================================================
+
+COPY main FILE FROM PREVIOUS FOLDER. Edit main  .adb file.
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02/src$ cp ../../ada-concurrent-01/src/src/main_ada_tasks_04.adb ./main_ada_tasks2_01.adb
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02/src$ ls -al
+total 12
+drwxrwxr-x 2 wruslan wruslan 4096 Feb 21 12:19 .
+drwxrwxr-x 8 wruslan wruslan 4096 Feb 21 12:12 ..
+-rw-rw-r-- 1 wruslan wruslan 2286 Feb 21 12:19 main_ada_tasks2_01.adb
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02/src$ 
+
+===========================================================
+EXCERPT FOR Main File main_ada_tasks2_01.adb
+===========================================================
+-- File: main_ada_tasks2_01.adb
+-- Date: Sun 21 Feb 2021 12:00:52 PM +08
+-- Author: WRY wruslandr@gmail.com
+-- ========================================================
+
+with Ada.Text_IO;
+with Ada.Real_Time; use Ada.Real_Time;
+
+-- ========================================================
+procedure main_ada_tasks2_01
+with SPARK_Mode => on
+is 
+
+   -- RENAMING STANDARD PACKAGES FOR CONVENIENCE
+   package ATIO    renames Ada.Text_IO;
+   package ART     renames Ada.Real_Time;
+   
+begin
+   
+   ATIO.Put_Line ("Bismillah 3 times WRY");
+   ATIO.Put_Line ("Running inside GNAT Studio Community");
+
+  
+   ATIO.Put_Line ("Alhamdulillah 3 times WRY");
+   
+-- ========================================================   
+end main_ada_tasks2_01;
+
+
+-- ========================================================
+Run shell command: tree for contents of entire ada source directory.
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02/src$ cd ..
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ tree ./
+./
+├── ada_tasks2_01.gpr
+├── docs
+│   └── session_create_ada_concurrent_02.txt
+├── exec
+├── figures
+├── obj
+├── README.md
+└── src
+    └── main_ada_tasks2_01.adb
+
+5 directories, 4 files
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ 
+
+===========================================================   
+OPEN GNATSTUDIO IDE.   
+===========================================================
+(1) Open project. Select project file ada_tasks2_01.gpr 
+(2) Expand folder src. Look for main_ada_tasks2_01.adb
+(3) Open file main_ada_tasks2_01.adb in editor environment tab
+
+(4) Menu -> Build -> Clean -> Clean All.
+=======================================
+gprclean -r -P/home/wruslan/github/ada-concurrent-02/ada_tasks2_01.gpr -c -f
+[2021-02-21 12:40:38] process terminated successfully, elapsed time: 00.73s
+
+(5) Menu -> Build -> Project -> Build All.
+=======================================
+gprbuild -d -P/home/wruslan/github/ada-concurrent-02/ada_tasks2_01.gpr -s -k
+Compile
+   [Ada]          main_ada_tasks2_01.adb
+Bind
+   [gprbind]      main_ada_tasks2_01.bexch
+   [Ada]          main_ada_tasks2_01.ali
+Link
+   [link]         main_ada_tasks2_01.adb
+[2021-02-21 12:42:17] process terminated successfully, elapsed time: 01.03s
+
+(6) Run tree again in terminal. Notice new files.
+=======================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ tree ./
+./
+├── ada_tasks2_01.gpr
+├── docs
+│   └── session_create_ada_concurrent_02.txt
+├── exec
+│   └── main_ada_tasks2_01.adx
+├── figures
+├── obj
+│   ├── b__main_ada_tasks2_01.adb
+│   ├── b__main_ada_tasks2_01.ads
+│   ├── b__main_ada_tasks2_01.ali
+│   ├── b__main_ada_tasks2_01.o
+│   ├── gpsauto.cgpr
+│   ├── main_ada_tasks2_01.adb.stderr
+│   ├── main_ada_tasks2_01.adb.stdout
+│   ├── main_ada_tasks2_01.ali
+│   ├── main_ada_tasks2_01.bexch
+│   ├── main_ada_tasks2_01.cswi
+│   └── main_ada_tasks2_01.o
+├── README.md
+└── src
+    └── main_ada_tasks2_01.adb
+
+5 directories, 16 files
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/ada-concurrent-02$ 
+
+(7) Menu -> Build -> Project -> Build & Run. Can also use shortcut icon.
+=======================================
+/home/wruslan/github/ada-concurrent-02/exec/main_ada_tasks2_01.adx
+Bismillah 3 times WRY
+Running inside GNAT Studio Community
+Alhamdulillah 3 times WRY
+[2021-02-21 12:44:58] process terminated successfully, elapsed time: 00.20s
+
+===========================================================
+UPDATE GITHUB REPOSITORY
+===========================================================
+
+

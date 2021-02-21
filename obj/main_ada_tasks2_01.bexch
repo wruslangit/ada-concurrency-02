@@ -1,0 +1,25 @@
+[GENERATED OBJECT FILE]
+b__main_ada_tasks2_01.o
+[PROJECT FILES]
+/home/wruslan/github/ada-concurrent-02/ada_tasks2_01.gpr
+20210221041240
+[BOUND OBJECT FILES]
+/home/wruslan/github/ada-concurrent-02/obj/main_ada_tasks2_01.o
+[GENERATED SOURCE FILES]
+b__main_ada_tasks2_01.ads
+b__main_ada_tasks2_01.adb
+b__main_ada_tasks2_01.ali
+[RESULTING OPTIONS]
+-L/home/wruslan/github/ada-concurrent-02/obj/
+-L/home/wruslan/github/ada-concurrent-02/obj/
+-L/usr/lib/gcc/x86_64-linux-gnu/9/adalib/
+-shared
+-shared-libgcc
+-lgnarl-9
+-lgnat-9
+-lpthread
+-lrt
+-ldl
+[RUN PATH OPTION]
+/usr/lib/gcc/x86_64-linux-gnu/9/adalib/
+/usr/lib
