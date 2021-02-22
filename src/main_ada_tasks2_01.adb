@@ -5,47 +5,27 @@
 with Ada.Text_IO;
 with Ada.Real_Time; use Ada.Real_Time;
 
--- with pkg_ada_dtstamp;
--- with pkg_embedded_car;
--- with pkg_vector_array;
+with pkg_ada_dtstamp;
+with pkg_ada_three_tasks;
 
 -- ========================================================
 procedure main_ada_tasks2_01
-with SPARK_Mode => on
+    with SPARK_Mode => on
 is 
 
-  -- RENAMING STANDARD PACKAGES FOR CONVENIENCE
+  -- RENAMING STANDARD ADA PACKAGES FOR CONVENIENCE
    package ATIO    renames Ada.Text_IO;
    package ART     renames Ada.Real_Time;
    
-   --package PADTS   renames pkg_ada_dtstamp;
-   --package PEC     renames pkg_embedded_car;
-   --package PVA     renames pkg_vector_array;
-   
-   -- the_start, the_finish : ART.Time; 
-   -- the_deadline  : ART.Time_Span;
-   
-   -- PVA.SumDiff(A, B, Sum, Diff);
-   -- A    : PVA.Vector;
-   -- B    : PVA.Vector;
-   -- Sum  : PVA.Vector_Prt;
-   -- Diff : PVA.Vector_Prt;
+   -- RENAMING USER-DEFINED ADA PACKAGES FOR CONVENIENCE
+   package PADTS   renames pkg_ada_dtstamp;
+   package PATT    renames pkg_ada_three_tasks;
    
 begin
-   -- PADTS.dtstamp;
-   ATIO.Put_Line ("Bismillah 3 times WRY");
-   ATIO.Put_Line ("Running inside GNAT Studio Community");
-
-   -- =====================================================
-   -- Procedure test timing for overrun
-   -- the_deadline := ART.To_Time_Span(0.075);
-   -- the_start    := ART.Clock;
-   -- for idx in 1..10 loop 
-      --PADTS.exec_delay_time (ART.To_Time_Span(0.0025));      
-   -- end loop;   
-   -- the_finish := ART.Clock;
-   -- PADTS.exec_check_overrun(the_start, the_finish, the_deadline);
    
+   PADTS.dtstamp; ATIO.Put_Line ("Bismillah 3 times WRY");
+   PADTS.dtstamp; ATIO.Put_Line ("Running inside GNAT Studio Community");
+
    -- =====================================================   
    -- Introduce Ada tasks
    -- =====================================================
@@ -57,11 +37,11 @@ begin
    -- tsk_read_speed
    -- tsk_monitor_engine
   
+   ATIO.New_Line;
+   PATT.exec_three_tasks;
    
-   -- PVA.exec_task_01;
-   
-   -- PADTS.dtstamp;
-   ATIO.Put_Line ("Alhamdulillah 3 times WRY");
+   ATIO.New_Line;
+   PADTS.dtstamp; ATIO.Put_Line ("Alhamdulillah 3 times WRY");
    
 -- ========================================================   
 end main_ada_tasks2_01;

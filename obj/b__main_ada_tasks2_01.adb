@@ -3,6 +3,8 @@ pragma Ada_95;
 pragma Source_File_Name (ada_main, Spec_File_Name => "b__main_ada_tasks2_01.ads");
 pragma Source_File_Name (ada_main, Body_File_Name => "b__main_ada_tasks2_01.adb");
 pragma Suppress (Overflow_Check);
+
+with System.Restrictions;
 with Ada.Exceptions;
 
 package body ada_main is
@@ -27,10 +29,23 @@ package body ada_main is
    E143 : Short_Integer; pragma Import (Ada, E143, "system__finalization_root_E");
    E141 : Short_Integer; pragma Import (Ada, E141, "ada__finalization_E");
    E140 : Short_Integer; pragma Import (Ada, E140, "system__file_io_E");
+   E190 : Short_Integer; pragma Import (Ada, E190, "system__storage_pools_E");
+   E186 : Short_Integer; pragma Import (Ada, E186, "system__finalization_masters_E");
+   E184 : Short_Integer; pragma Import (Ada, E184, "system__storage_pools__subpools_E");
+   E182 : Short_Integer; pragma Import (Ada, E182, "ada__strings__unbounded_E");
    E114 : Short_Integer; pragma Import (Ada, E114, "system__task_info_E");
    E106 : Short_Integer; pragma Import (Ada, E106, "system__task_primitives__operations_E");
+   E148 : Short_Integer; pragma Import (Ada, E148, "ada__calendar_E");
+   E152 : Short_Integer; pragma Import (Ada, E152, "ada__calendar__time_zones_E");
    E006 : Short_Integer; pragma Import (Ada, E006, "ada__real_time_E");
    E128 : Short_Integer; pragma Import (Ada, E128, "ada__text_io_E");
+   E210 : Short_Integer; pragma Import (Ada, E210, "system__tasking__initialization_E");
+   E220 : Short_Integer; pragma Import (Ada, E220, "system__tasking__protected_objects_E");
+   E222 : Short_Integer; pragma Import (Ada, E222, "system__tasking__protected_objects__entries_E");
+   E218 : Short_Integer; pragma Import (Ada, E218, "system__tasking__queuing_E");
+   E206 : Short_Integer; pragma Import (Ada, E206, "system__tasking__stages_E");
+   E146 : Short_Integer; pragma Import (Ada, E146, "pkg_ada_dtstamp_E");
+   E204 : Short_Integer; pragma Import (Ada, E204, "pkg_ada_three_tasks_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -41,19 +56,47 @@ package body ada_main is
 
    procedure finalize_library is
    begin
-      E128 := E128 - 1;
+      E222 := E222 - 1;
       declare
          procedure F1;
-         pragma Import (Ada, F1, "ada__text_io__finalize_spec");
+         pragma Import (Ada, F1, "system__tasking__protected_objects__entries__finalize_spec");
       begin
          F1;
       end;
+      E128 := E128 - 1;
       declare
          procedure F2;
-         pragma Import (Ada, F2, "system__file_io__finalize_body");
+         pragma Import (Ada, F2, "ada__text_io__finalize_spec");
+      begin
+         F2;
+      end;
+      E182 := E182 - 1;
+      declare
+         procedure F3;
+         pragma Import (Ada, F3, "ada__strings__unbounded__finalize_spec");
+      begin
+         F3;
+      end;
+      E184 := E184 - 1;
+      declare
+         procedure F4;
+         pragma Import (Ada, F4, "system__storage_pools__subpools__finalize_spec");
+      begin
+         F4;
+      end;
+      E186 := E186 - 1;
+      declare
+         procedure F5;
+         pragma Import (Ada, F5, "system__finalization_masters__finalize_spec");
+      begin
+         F5;
+      end;
+      declare
+         procedure F6;
+         pragma Import (Ada, F6, "system__file_io__finalize_body");
       begin
          E140 := E140 - 1;
-         F2;
+         F6;
       end;
       declare
          procedure Reraise_Library_Exception_If_Any;
@@ -138,6 +181,36 @@ package body ada_main is
       Locking_Policy := ' ';
       Queuing_Policy := ' ';
       Task_Dispatching_Policy := ' ';
+      System.Restrictions.Run_Time_Restrictions :=
+        (Set =>
+          (False, False, False, False, False, False, False, False, 
+           False, False, False, False, False, False, False, False, 
+           False, False, False, False, False, False, False, False, 
+           False, False, False, False, False, False, False, False, 
+           False, False, False, False, False, False, False, False, 
+           False, False, False, False, False, False, False, False, 
+           False, False, False, False, False, False, False, False, 
+           False, False, False, False, False, False, False, False, 
+           False, False, False, False, False, False, False, False, 
+           False, False, False, False, False, True, False, False, 
+           False, False, False, False, False, False, False, False, 
+           False, False, False, False),
+         Value => (0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+         Violated =>
+          (False, False, False, False, True, True, False, False, 
+           True, False, False, True, True, True, True, False, 
+           False, False, False, False, True, True, False, True, 
+           True, False, True, True, True, True, False, False, 
+           False, False, False, True, False, False, True, False, 
+           True, False, False, True, False, False, False, True, 
+           False, False, False, True, False, False, False, False, 
+           False, True, False, True, False, True, True, True, 
+           False, False, True, False, True, True, True, False, 
+           True, True, False, True, True, True, True, False, 
+           False, True, False, False, False, False, False, False, 
+           True, False, False, False),
+         Count => (0, 0, 0, 0, 0, 0, 1, 0, 0, 0),
+         Unknown => (False, False, False, False, False, False, True, False, False, False));
       Priority_Specific_Dispatching :=
         Local_Priority_Specific_Dispatching'Address;
       Num_Specific_Dispatching := 0;
@@ -199,16 +272,44 @@ package body ada_main is
       E141 := E141 + 1;
       System.File_Io'Elab_Body;
       E140 := E140 + 1;
+      System.Storage_Pools'Elab_Spec;
+      E190 := E190 + 1;
+      System.Finalization_Masters'Elab_Spec;
+      System.Finalization_Masters'Elab_Body;
+      E186 := E186 + 1;
+      System.Storage_Pools.Subpools'Elab_Spec;
+      E184 := E184 + 1;
+      Ada.Strings.Unbounded'Elab_Spec;
+      E182 := E182 + 1;
       System.Task_Info'Elab_Spec;
       E114 := E114 + 1;
       System.Task_Primitives.Operations'Elab_Body;
       E106 := E106 + 1;
+      Ada.Calendar'Elab_Spec;
+      Ada.Calendar'Elab_Body;
+      E148 := E148 + 1;
+      Ada.Calendar.Time_Zones'Elab_Spec;
+      E152 := E152 + 1;
       Ada.Real_Time'Elab_Spec;
       Ada.Real_Time'Elab_Body;
       E006 := E006 + 1;
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E128 := E128 + 1;
+      System.Tasking.Initialization'Elab_Body;
+      E210 := E210 + 1;
+      System.Tasking.Protected_Objects'Elab_Body;
+      E220 := E220 + 1;
+      System.Tasking.Protected_Objects.Entries'Elab_Spec;
+      E222 := E222 + 1;
+      System.Tasking.Queuing'Elab_Body;
+      E218 := E218 + 1;
+      System.Tasking.Stages'Elab_Body;
+      E206 := E206 + 1;
+      pkg_ada_dtstamp'elab_body;
+      E146 := E146 + 1;
+      pkg_ada_three_tasks'elab_body;
+      E204 := E204 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -244,9 +345,11 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   /home/wruslan/github/ada-concurrent-02/obj/main_ada_tasks2_01.o
-   --   -L/home/wruslan/github/ada-concurrent-02/obj/
-   --   -L/home/wruslan/github/ada-concurrent-02/obj/
+   --   /home/wruslan/github-git/ada-concurrent-02/obj/pkg_ada_dtstamp.o
+   --   /home/wruslan/github-git/ada-concurrent-02/obj/pkg_ada_three_tasks.o
+   --   /home/wruslan/github-git/ada-concurrent-02/obj/main_ada_tasks2_01.o
+   --   -L/home/wruslan/github-git/ada-concurrent-02/obj/
+   --   -L/home/wruslan/github-git/ada-concurrent-02/obj/
    --   -L/usr/lib/gcc/x86_64-linux-gnu/9/adalib/
    --   -shared
    --   -lgnarl-9

@@ -1,0 +1,139 @@
+gprclean -r -P/home/wruslan/github-git/ada-concurrent-02/ada_tasks2_01.gpr -c -f
+"/home/wruslan/github-git/ada-concurrent-02/obj/pkg_ada_dtstamp.o" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/pkg_ada_dtstamp.ali" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/pkg_ada_dtstamp.cswi" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/pkg_ada_dtstamp.adb.stdout" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/pkg_ada_dtstamp.adb.stderr" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/pkg_ada_three_tasks.o" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/pkg_ada_three_tasks.ali" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/pkg_ada_three_tasks.cswi" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/pkg_ada_three_tasks.adb.stdout" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/pkg_ada_three_tasks.adb.stderr" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/main_ada_tasks2_01.o" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/main_ada_tasks2_01.ali" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/main_ada_tasks2_01.cswi" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/main_ada_tasks2_01.adb.stdout" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/main_ada_tasks2_01.adb.stderr" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/b__main_ada_tasks2_01.o" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/b__main_ada_tasks2_01.ads" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/b__main_ada_tasks2_01.adb" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/b__main_ada_tasks2_01.ali" has been deleted
+"/home/wruslan/github-git/ada-concurrent-02/obj/main_ada_tasks2_01.bexch" has been deleted
+[2021-02-22 11:02:12] process terminated successfully, elapsed time: 00.75s
+
+===========================================================
+gprbuild -d -P/home/wruslan/github-git/ada-concurrent-02/ada_tasks2_01.gpr /home/wruslan/github-git/ada-concurrent-02/src/main_ada_tasks2_01.adb
+Compile
+   [Ada]          main_ada_tasks2_01.adb
+   [Ada]          pkg_ada_dtstamp.adb
+   [Ada]          pkg_ada_three_tasks.adb
+Bind
+   [gprbind]      main_ada_tasks2_01.bexch
+   [Ada]          main_ada_tasks2_01.ali
+Link
+   [link]         main_ada_tasks2_01.adb
+[2021-02-22 11:03:19] process terminated successfully, elapsed time: 01.20s
+
+============================================================
+/home/wruslan/github-git/ada-concurrent-02/exec/main_ada_tasks2_01.adx
+2021-02-22 03:16:39.54609514014 Bismillah 3 times WRY
+2021-02-22 03:16:39.54609531423 Running inside GNAT Studio Community
+
+2021-02-22 03:16:39.54609798063 Running tsktyp_03 --> tsk_monitor_engine(500 msec cycle)
+2021-02-22 03:16:39.54609876071 Running tsktyp_02 --> tsk_read_speed(250 msec cycle) 
+2021-02-22 03:16:39.54609995702 Running tsktyp_01 --> tsk_display_speed(100 msec cycle)
+2021-02-22 03:16:39.64710225865 Running tsktyp_01 --> tsk_display_speed(100 msec cycle)
+2021-02-22 03:16:39.74810450812 Running tsktyp_01 --> tsk_display_speed(100 msec cycle)
+2021-02-22 03:16:39.79860057013 Running tsktyp_02 --> tsk_read_speed(250 msec cycle) 
+2021-02-22 03:16:39.84910649279 Running tsktyp_01 --> tsk_display_speed(100 msec cycle)
+2021-02-22 03:16:39.94010888130 Running tsktyp_01 --> tsk_display_speed(100 msec cycle)
+2021-02-22 03:16:40.04109990111 Running tsktyp_03 --> tsk_monitor_engine(500 msec cycle)
+2021-02-22 03:16:40.04110229742 Running tsktyp_02 --> tsk_read_speed(250 msec cycle) 
+2021-02-22 03:16:40.04111073892 Running tsktyp_01 --> tsk_display_speed(100 msec cycle)
+2021-02-22 03:16:40.14211229806 Running tsktyp_01 --> tsk_display_speed(100 msec cycle)
+2021-02-22 03:16:40.24311861473 Running tsktyp_01 --> tsk_display_speed(100 msec cycle)
+2021-02-22 03:16:40.29360406606 Running tsktyp_02 --> tsk_read_speed(250 msec cycle) 
+2021-02-22 03:16:40.34412087580 Running tsktyp_01 --> tsk_display_speed(100 msec cycle)
+2021-02-22 03:16:40.44512311163 Running tsktyp_01 --> tsk_display_speed(100 msec cycle)
+2021-02-22 03:16:40.54610219500 Running tsktyp_03 --> tsk_monitor_engine(500 msec cycle)
+2021-02-22 03:16:40.54610608619 Running tsktyp_02 --> tsk_read_speed(250 msec cycle) 
+2021-02-22 03:16:40.79860783147 Running tsktyp_02 --> tsk_read_speed(250 msec cycle) 
+2021-02-22 03:16:41.04110425744 Running tsktyp_03 --> tsk_monitor_engine(500 msec cycle)
+2021-02-22 03:16:41.04110922212 Running tsktyp_02 --> tsk_read_speed(250 msec cycle) 
+2021-02-22 03:16:41.29361126851 Running tsktyp_02 --> tsk_read_speed(250 msec cycle) 
+2021-02-22 03:16:41.54610635177 Running tsktyp_03 --> tsk_monitor_engine(500 msec cycle)
+2021-02-22 03:16:41.54611324683 Running tsktyp_02 --> tsk_read_speed(250 msec cycle) 
+2021-02-22 03:16:41.79861558201 Running tsktyp_02 --> tsk_read_speed(250 msec cycle) 
+2021-02-22 03:16:42.04110832726 Running tsktyp_03 --> tsk_monitor_engine(500 msec cycle)
+2021-02-22 03:16:42.54611046977 Running tsktyp_03 --> tsk_monitor_engine(500 msec cycle)
+2021-02-22 03:16:43.04111269586 Running tsktyp_03 --> tsk_monitor_engine(500 msec cycle)
+2021-02-22 03:16:43.54611539894 Running tsktyp_03 --> tsk_monitor_engine(500 msec cycle)
+2021-02-22 03:16:44.04111746287 Running tsktyp_03 --> tsk_monitor_engine(500 msec cycle)
+
+2021-02-22 03:16:44.54612108803 Alhamdulillah 3 times WRY
+[2021-02-22 11:16:44] process terminated successfully, elapsed time: 05.13s
+
+===========================================================
+ALHAMDULILLAH 3 TIMES.
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-git/ada-concurrent-02$ ls -al
+total 44
+drwxrwxr-x  8 wruslan wruslan 4096 Feb 21 12:57 .
+drwxrwxr-x 21 wruslan wruslan 4096 Feb 21 11:58 ..
+-rw-rw-r--  1 wruslan wruslan 4157 Feb 21 12:12 ada_tasks2_01.gpr
+drwxrwxr-x  2 wruslan wruslan 4096 Feb 22 11:10 docs
+drwxrwxr-x  2 wruslan wruslan 4096 Feb 22 11:03 exec
+drwxrwxr-x  2 wruslan wruslan 4096 Feb 21 12:55 figures
+drwxrwxr-x  8 wruslan wruslan 4096 Feb 22 10:59 .git
+drwxrwxr-x  2 wruslan wruslan 4096 Feb 22 11:03 obj
+-rw-rw-r--  1 wruslan wruslan   88 Feb 21 12:57 README.md
+drwxrwxr-x  4 wruslan wruslan 4096 Feb 22 10:59 src
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-git/ada-concurrent-02$ tree ./
+./
+├── ada_tasks2_01.gpr
+├── docs
+│   ├── run-three-tacks-package.txt
+│   ├── session-01.txt
+│   └── session_create_ada_concurrent_02.txt
+├── exec
+│   └── main_ada_tasks2_01.adx
+├── figures
+│   ├── gnatstudio-initial-commit.jpg
+│   ├── Screenshot from 2021-02-21 12-53-31.jpg
+│   └── Screenshot from 2021-02-21 12-53-31.png
+├── obj
+│   ├── ada_tasks2_01-loc.xml
+│   ├── b__main_ada_tasks2_01.adb
+│   ├── b__main_ada_tasks2_01.ads
+│   ├── b__main_ada_tasks2_01.ali
+│   ├── b__main_ada_tasks2_01.o
+│   ├── gpsauto.cgpr
+│   ├── main_ada_tasks2_01.adb.stderr
+│   ├── main_ada_tasks2_01.adb.stdout
+│   ├── main_ada_tasks2_01.ali
+│   ├── main_ada_tasks2_01.bexch
+│   ├── main_ada_tasks2_01.o
+│   ├── pkg_ada_dtstamp.adb.stderr
+│   ├── pkg_ada_dtstamp.adb.stdout
+│   ├── pkg_ada_dtstamp.ali
+│   ├── pkg_ada_dtstamp.o
+│   ├── pkg_ada_three_tasks.adb.stderr
+│   ├── pkg_ada_three_tasks.adb.stdout
+│   ├── pkg_ada_three_tasks.ali
+│   └── pkg_ada_three_tasks.o
+├── README.md
+└── src
+    ├── main_ada_tasks2_01.adb
+    ├── pkg-ada-dtstamp
+    │   ├── pkg_ada_dtstamp.adb
+    │   └── pkg_ada_dtstamp.ads
+    └── pkg-ada-three-tasks
+        ├── pkg_ada_three_tasks.adb
+        └── pkg_ada_three_tasks.ads
+
+7 directories, 33 files
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-git/ada-concurrent-02$ 
+
+===========================================================
+

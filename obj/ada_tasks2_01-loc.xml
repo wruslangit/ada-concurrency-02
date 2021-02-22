@@ -1,10 +1,29 @@
 <?xml version="1.0"?>
-<Locations>
+<Locations >
   <Project>
-    <vfs_file />
+    <vfs_file>/home/wruslan/github-git/ada-concurrent-02/ada_tasks2_01.gpr</vfs_file>
+    <file_marker column=" 21" line=" 37" >
+      <vfs_project>/home/wruslan/github-git/ada-concurrent-02/ada_tasks2_01.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github-git/ada-concurrent-02/src/main_ada_tasks2_01.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 10" line=" 38" >
+      <vfs_project>/home/wruslan/github-git/ada-concurrent-02/ada_tasks2_01.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github-git/ada-concurrent-02/src/pkg-ada-three-tasks/pkg_ada_three_tasks.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 44" >
+      <vfs_project>/home/wruslan/github-git/ada-concurrent-02/ada_tasks2_01.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github-git/ada-concurrent-02/src/pkg-ada-three-tasks/pkg_ada_three_tasks.adb</vfs_file>
+    </file_marker>
     <file_marker current="true" column=" 1" line=" 1" >
-      <vfs_project>/home/wruslan/github/ada-concurrent-02/ada_tasks2_01.gpr</vfs_project>
-      <vfs_file>/home/wruslan/github/ada-concurrent-02/src/main_ada_tasks2_01.adb</vfs_file>
+      <vfs_project />
+      <vfs_file>/home/wruslan/github-git/ada-concurrent-02/README.md</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <vfs_file >/home/wruslan/github/ada-concurrent-02/ada_tasks2_01.gpr</vfs_file>
+    <file_marker current="true" column=" 1" line=" 1">
+      <vfs_project >/home/wruslan/github/ada-concurrent-02/ada_tasks2_01.gpr</vfs_project>
+      <vfs_file >/home/wruslan/github/ada-concurrent-02/src/main_ada_tasks2_01.adb</vfs_file>
     </file_marker>
   </Project>
 </Locations>
